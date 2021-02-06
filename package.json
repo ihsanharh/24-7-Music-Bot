@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "XzF",
-  "licensi": "ISC",
+  "licensi": "apache 2",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "discord.js": "^12.5.1",
