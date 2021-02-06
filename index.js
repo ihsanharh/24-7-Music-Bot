@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const bot = new discord.Client();
 const ytdl = require('ytdl-core');
-const { TOKEN, CHANNEL, SERVER, LIVE } = require("./config.js");
+const { TOKEN, CHANNEL, SERVER, LIVE } = require("./config.json");
 
 bot.on('ready', async () => {
  console.log("started stream music")
