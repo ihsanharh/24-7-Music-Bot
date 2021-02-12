@@ -1,5 +1,5 @@
 const discord = require('discord.js');
-const bot = new discord.Client();
+const bot = new discord.Client({ ws: { properties: { $browser: "Discord iOS" }} });
 const ytdl = require('ytdl-core');
 const { TOKEN, CHANNEL, SERVER, LIVE } = require("./config.json");
 
@@ -13,7 +13,7 @@ bot.on('ready', async () => {
 })
 
 setInterval(async function() {
- if(!client.voice.connections.get(SERVER)) {
+ if(!bot.voice.connections.get(SERVER)) {
    let channel = bot.channels.cache.get(CHANNEL) || await bot.channels.fetch(CHANNEL)
    if(!channel) return;
    
